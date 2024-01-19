@@ -1,0 +1,9 @@
+
+<h2 mat-dialog-title style="color: darkslategray">Delete Confirmation</h2>
+<mat-dialog-content>
+    Do you want to delete {{ data.name }}?
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-flat-button color="primary" (click)="onNoClick()">Cancel</button>
+    <button mat-flat-button color="warn" (click)="onYesClick()" cdkFocusInitial>Yes, Delete</button>
+</mat-dialog-actions>

@@ -1,0 +1,53 @@
+<!-- user-form.component.html -->
+<form  class="form-field-container" [formGroup]="userForm" style="margin-bottom: 30px;">
+  <mat-form-field >
+    <input matInput formControlName="name" placeholder="Name" [errorStateMatcher]="matcher">
+    <mat-error *ngIf="userForm.get('name')?.hasError('required')">Name is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Date Of Birth</mat-label>
+    <input matInput [matDatepicker]="dateOfBirthPicker" formControlName="dateOfBirth">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="dateOfBirthPicker">
+      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker #dateOfBirthPicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Start Working Date</mat-label>
+    <input matInput [matDatepicker]="startWorkingDatePicker" formControlName="startWorkingDate">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="startWorkingDatePicker">
+      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker #startWorkingDatePicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Mark Type</mat-label>
+    <mat-select formControlName="markType" placeholder="Mark Type" required>
+      <mat-option *ngFor="let mark of markTypes" [value]="mark.id">
+        {{ mark.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="checkbox-group">
+    <mat-label>Schedules</mat-label>
+    <div *ngFor="let shift of shifts; let i = index" class="checkbox-item">
+      <mat-checkbox [formControl]="scheduleControls['shift' + (i + 1)]">
+        {{ shift }}
+      </mat-checkbox>
+    </div>
+  </div>
+
+
+  <!-- Add other form fields as needed -->
+
+  <div class="button-row">
+    <button mat-raised-button color="primary" (click)="saveUser()">Save</button>
+    <button mat-raised-button color="warn" (click)="closeDialog()">Cancel</button>
+  </div>
+</form>
