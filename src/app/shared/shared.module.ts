@@ -6,6 +6,7 @@ import {NavBarComponent} from "./nav-bar/nav-bar.component";
 import { CommonDialogComponent } from './function/common-dialog/common-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
+import {UserModule} from "../user/user.module";
 
 
 @NgModule({
@@ -13,11 +14,12 @@ import {MatButtonModule} from "@angular/material/button";
   exports: [
     NavBarComponent
   ],
-  imports: [
-    CommonModule,
-    SharedRoutingModule,
-    MatDialogModule,
-    MatButtonModule
-  ]
+    imports: [
+        CommonModule,
+        SharedRoutingModule,
+        MatDialogModule,
+        MatButtonModule,
+        UserModule
+    ]
 })
 export class SharedModule { }

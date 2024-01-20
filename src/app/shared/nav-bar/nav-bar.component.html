@@ -1,1 +1,14 @@
-<a routerLink="/user/display">book</a>
+<div class="sidebar">
+  <a  routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+  <a routerLink="/user/display" routerLinkActive="active">User</a>
+  <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  <a routerLink="/about" routerLinkActive="active">About</a>
+</div>
+
+<div class="content" *ngIf="isUserRouteActive()">
+  <router-outlet></router-outlet>
+</div>
+
+<!--<div class="content" *ngIf="isContactRouteActive()">-->
+<!--  <app-contact-list></app-contact-list>-->
+<!--</div>-->

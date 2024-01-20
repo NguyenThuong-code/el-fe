@@ -22,29 +22,32 @@ import {MatNativeDateModule} from "@angular/material/core";
 
 
 @NgModule({
-  declarations: [
-    UserListComponent,
-    UserScheduleComponent,
+    declarations: [
+        UserListComponent,
+        UserScheduleComponent,
 
-    UserFormComponent
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatTableModule,
-    MatCheckboxModule,
-    MatPaginatorModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    UserRoutingModule,
-    MatIconModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
+        UserFormComponent
+    ],
+    exports: [
+        UserListComponent
+    ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatSelectModule,
+        MatButtonModule,
+        MatTableModule,
+        MatCheckboxModule,
+        MatPaginatorModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        UserRoutingModule,
+        MatIconModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
 
-  ]
+    ]
 })
 export class UserModule { }
