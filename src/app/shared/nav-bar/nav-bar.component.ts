@@ -16,22 +16,21 @@ export class NavBarComponent implements OnInit {
       }
     });
   }
-
-  isUserRouteActive(): boolean {
-    const urlTree = this.router.parseUrl(this.router.url);
-    const segments = urlTree.root.children['primary'].segments;
-    return segments.some(segment => segment.path === 'user' || segment.path === 'display');
-  }
-
-  isContactRouteActive(): boolean {
-    const urlTree = this.router.parseUrl(this.router.url);
-    const segments = urlTree.root.children['primary'].segments;
-    return segments.some(segment => segment.path === 'contact');
-  }
-
   private updateRouteFlags(): void {
     // Optional: If you need to perform additional actions on route change
   }
   ngOnInit(): void {
   }
+  // isUserRouteActive(): boolean {
+  //   const urlTree = this.router.parseUrl(this.router.url);
+  //   const segments = urlTree.root.children['primary'].segments;
+  //   return segments.some(segment => segment.path === 'user' || segment.path === 'display');
+  // }
+  //
+  // isContactRouteActive(): boolean {
+  //   const urlTree = this.router.parseUrl(this.router.url);
+  //   const segments = urlTree.root.children['primary'].segments;
+  //   return segments.some(segment => segment.path === 'contact');
+  // }
+
 }

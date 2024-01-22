@@ -16,3 +16,11 @@
     display: flex;
     gap: 5px;
 }
+.sidebar {
+  width: 200px; /* Set a fixed width for the sidebar */
+  float: left; /* or use position: fixed; or any other positioning method */
+}
+
+.content {
+  margin-left: 220px; /* Adjust margin to leave space for the sidebar */
+}
