@@ -1,0 +1,19 @@
+<div class="login-form">
+  <form class="context" (ngSubmit)="login()">
+    <h2 class="text-center">Log in</h2>
+    <mat-form-field class="form-group">
+      <input matInput type="text" placeholder="Username" [(ngModel)]="loginData.username" name="username" required>
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput type="password" placeholder="Password" [(ngModel)]="loginData.password" name="password" required>
+    </mat-form-field>
+    <div class="form-group">
+      <button type="submit" class="btn btn-block">Log in</button>
+    </div>
+    <div class="clearfix">
+      <mat-checkbox class="pull-left checkbox-inline" name="rememberMe">Remember me</mat-checkbox>
+      <a href="#" class="pull-right">Forgot Password?</a>
+    </div>
+  </form>
+  <p class="text-center"><a href="#">Create an Account</a></p>
+</div>

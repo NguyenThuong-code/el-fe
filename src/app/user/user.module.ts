@@ -25,7 +25,6 @@ import {MatNativeDateModule} from "@angular/material/core";
     declarations: [
         UserListComponent,
         UserScheduleComponent,
-
         UserFormComponent
     ],
     exports: [
